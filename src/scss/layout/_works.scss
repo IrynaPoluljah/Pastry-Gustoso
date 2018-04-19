@@ -1,0 +1,42 @@
+.l-works {
+ font-size: 20px;
+ padding: 4.75em 0 6.15em;
+ background-color: $yellowBG;
+}
+
+.l-works__list {
+ display: grid;
+ grid-template-columns: 2fr 2fr;
+ grid-gap: 20px;
+ padding: 0 10px;
+ padding-top: 15px; 
+ position: relative;
+}
+
+.l-works__list li {
+ font-size: 0;
+ outline: 5px solid $white;
+ outline-offset: -10px;
+}
+
+.l-works__list li img {
+ width: 100%;
+ height: 100%;
+}
+
+@media(max-width: 1300px) {
+  .l-works__list {
+    grid-gap: 8px;
+   }
+}
+
+@media(max-width: 479px) {
+  .l-works__list {
+    grid-template-columns: none;
+    grid-row: 4;
+   }
+
+   .l-works {
+     padding-bottom: 2.15em;
+   }
+}

@@ -1,0 +1,106 @@
+.l-team p {
+ max-width: 80%;
+ margin: 0 auto 47px;
+ font-size: 1rem;
+ text-align: center;
+ line-height: 1.5rem;
+}
+
+.l-team__position {
+ @include fontSecond;
+ font-size: 24px;
+ letter-spacing: $LetterSpacXs;
+ color: $brown;
+ text-align: center;
+ margin-bottom: 70px;
+}
+
+.l-team__name {
+ @include flex;
+ @include space-between;
+ max-width: 372px;
+ padding: 25px 16px 20px;
+ border-bottom: 1px solid #d7d5ca;
+ border-top: 1px solid #d7d5ca;
+ margin: 0 auto 60px;
+ position: relative;
+  &::after {
+   content: "";
+   display: block;
+   position: absolute;
+   height: 100px;
+   width: 100px;
+   border-radius: 50%;
+   background-image: url(../img/avatar-image.png);
+   background-size: cover;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   border: 7px solid $white;
+   box-shadow: 0 0 0 19px $yellowBG;
+  }
+}
+
+.l-team__name span {
+ display: block;
+}
+
+.l-team__motto {
+ font-size: 24px;
+ font-family: $fontScriptina;
+ font-weight: $fontRegular;
+ line-height: 1.25em;
+ color: $brownLight;
+ max-width: 360px;
+ padding: 10px 35px;
+ margin: 0 auto;
+ text-align: center;
+ position: relative;
+  &::after,
+  &::before {
+   content: "";
+   display: block;
+   position: absolute;
+   height: 14px;
+   width: 23px;
+   background-image: url(../img/quote-left.png);
+   top: -14px;
+   left: -23px;
+  }
+  &::after {
+   background-image: url(../img/quote-right.png);
+   bottom: -14px;
+   right: -23px;
+   top: auto;
+   left: auto;
+  }
+}
+
+@media(max-width: 600px) {
+  .l-team p {
+    max-width: 100%;
+   }
+}
+
+@media(max-width: 479px) {
+  .l-team__name {
+    padding: 25px 5px 20px;
+      &::after {
+        border-width: 5px;
+        box-shadow: 0 0 0 10px $yellowBG;
+      }
+  }
+  
+  .l-team__motto {
+    &::after {
+      bottom: 0;
+      right: 0;
+    }
+    &::before {
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+ 

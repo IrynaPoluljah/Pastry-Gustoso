@@ -1,0 +1,51 @@
+.l-ingredient li + li {
+ margin-top: 50px;
+}
+
+.l-ingredient__image {
+ width: 100px;
+ height: 100px;
+ border-radius: 50%;
+ margin: 0 auto;
+ margin-bottom: 20px;
+ box-shadow: 0 7px 10px 0 rgba(186, 178, 146, .3);
+}
+
+.l-ingredient__title {
+ @include fontSecond;
+ font-size: 30px;
+ letter-spacing: $LetterSpacXs;
+ color: $brownLight;
+ margin-bottom: 20px;
+ text-align: center;
+}
+
+.l-ingredient__info {
+ color: $brown;
+ font-size: 14px;
+ line-height: 1.4285em;
+ letter-spacing: $LetterSpacBig;
+ text-align: center;
+}
+
+@media(max-width: 1199px) {
+ .l-ingredient {
+  @include flex;
+  @include space-between;
+  margin-bottom: 30px;
+ }
+
+ .l-ingredient li + li {
+  margin-top: 0;
+ }
+}
+
+@media(max-width: 768px) {
+ .l-ingredient {
+  @include column;
+ }
+
+ .l-ingredient li + li {
+  margin-top: 30px;
+ }
+}

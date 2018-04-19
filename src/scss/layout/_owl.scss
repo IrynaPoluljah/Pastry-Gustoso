@@ -1,0 +1,106 @@
+.l-owl {
+ font-size: 30px;
+ position: relative;
+}
+
+.l-owl__wrap {
+ @include flex;
+ @include space-between;
+ padding: 0 50px;
+}
+
+.l-owl__item {
+ position: relative;
+ z-index: 10;
+}
+
+.l-owl__item--active img:hover {
+ cursor: pointer;
+}
+
+.l-owl__item--not-active img:hover {
+ cursor: default;
+}
+
+.l-owl__item + .l-owl__item {
+ margin-left: 1em;
+}
+
+.l-owl__nav--desktop {
+ @include flex;
+ @include space-between;
+ position: absolute;
+ width: 100%;
+ top: 50%;
+ transform: translateY(-50%);
+ z-index: 1;
+}
+
+.l-owl__nav--prev,
+.l-owl__nav--next {
+ font-size: 14px;
+ color: $darkBrown;
+ padding: 8px 11px;
+ border-radius: 50%;
+ border: 2px solid $darkBrown;
+ cursor: pointer;
+  &:hover {
+   background-color: $darkYellow;
+   transition: background-color .3s;
+  }
+}
+
+.l-owl__nav--disabled {
+ cursor: default;
+ color: $brownXs;
+ border-color: $brownXs;
+}
+
+.l-owl__nav--phone {
+  @include flex;
+  @include center;
+  visibility: hidden;
+}
+
+.l-owl__nav--bullets {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid $brownXs;
+  background-color: $brownXs;
+    &:hover {
+      cursor: pointer;
+    }
+}
+
+.l-owl__nav--bullets.is-active {
+  background-color: transparent;
+    &:hover {
+      cursor: default;
+    }
+}
+
+.l-owl__nav--bullets + .l-owl__nav--bullets {
+  margin-left: 10px;
+}
+
+@media(max-width: 992px) {
+ .l-owl__item + .l-owl__item {
+  margin-left: .3em;
+ }
+}
+
+@media(max-width: 479px) {
+  .l-owl__nav--desktop {
+    display: none;
+  }
+
+  .l-owl__wrap {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .l-owl__nav--phone {
+    visibility: visible;
+  }
+}

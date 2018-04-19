@@ -1,0 +1,37 @@
+.l-header {
+  padding: 18px 15px 9px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .47);
+  z-index: 2; 
+}
+ 
+.l-header__title {
+  font-size: 0;
+}
+
+.l-header__social a .fa {
+  color: $BGsocial;
+  font-size: 16px;
+}
+
+.l-header__social li {
+  display: inline;
+    & + li {
+      margin-left: 2.142em;
+    }
+}
+
+@media(max-width: 1199px) {
+  .l-header__social {
+    margin-left: auto;
+  }
+}
+
+@media(max-width: 479px) {
+  .l-header__social {
+    display: none;
+  }
+}

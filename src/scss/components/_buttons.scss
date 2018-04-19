@@ -1,0 +1,61 @@
+.c-button {
+ padding: 20px 50px;
+ font-family: $fontFamilySecond;
+ font-weight: $fontBold;
+ color: $white;
+ border: 1px dashed #9e9c93;
+ text-transform: uppercase;
+ user-select: none;
+  &:hover {
+   cursor: pointer;
+   transition: all .3s;
+  }
+}
+
+.c-button--inner {
+ background-color: rgba(0, 0, 0, .47);
+ font-size: 1rem;
+ letter-spacing: $letterSpacLg;
+  &:hover {
+   background-color: rgba(0, 0, 0, .6);
+   border-color: rgba(255, 255, 255, .7);
+  }
+}
+
+.c-button--transparent {
+ background-color: transparent;
+ border: 1px solid $greyDark;
+ color: $brownLight;
+ font-size: 18px;
+ letter-spacing: $LetterSpacLit;
+ padding: 20px 70px;
+  &:hover {
+    color: $greyDark;
+  }
+}
+
+.c-button--white {
+  background-color: $white;
+  color: $darkYellow;
+  border-color: $darkYellow;
+  &:hover {
+    color: $white;
+    border-color: $darkBrown;
+    background-color: $brownXs;
+  }
+}
+
+.c-button--recipe {
+  position: absolute;
+  left: -22px;
+  transform: translateY(-50%);
+  z-index: 10;
+  font-size: 18px;
+  letter-spacing: $LetterSpacLit;
+}
+
+@media(max-width: 479px) {
+  .c-button--recipe {
+    left: -6px;
+  }
+}

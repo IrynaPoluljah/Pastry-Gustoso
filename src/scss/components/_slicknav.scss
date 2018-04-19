@@ -1,0 +1,36 @@
+.slicknav_menu {
+ display: none;
+ margin-left: 40px;
+ background-color: transparent;
+}
+
+.slicknav_nav {
+ position: absolute;
+ right: 0;
+ left: 0;
+ top: 100%;
+ border-top: 1px solid rgba(255, 255, 255, .4);
+ background-color: rgba(0, 0, 0, .47);
+ text-align: right;
+}
+
+.slicknav_nav a {
+ padding: 10px 50px;
+  &:hover {
+   color: inherit;
+  }
+}
+
+.slicknav_btn {
+ border: 1px solid transparent;
+  &:hover {
+   border-color: rgba(255, 255, 255, .9);
+   transition: border-color .5s;
+  }
+}
+
+@media(max-width: 1199px) {
+ .slicknav_menu {
+  display: block;
+ }
+}

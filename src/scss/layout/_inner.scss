@@ -1,0 +1,62 @@
+.l-inner {
+ @include flex;
+ @include align-center;
+ font-size: 46px;
+ background-image: url(../img/BG-top.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+ min-height: 100vh;
+ border-bottom: 10px solid $white;
+ position: relative;
+  &::after {
+   content: "";
+   display: block;
+   height: 80px;
+   width: 80px;
+   background-color: $white;
+   border-radius: 50%;
+   position: absolute;
+   left: 50%;
+   bottom: -45px; 
+   transform: translate(-50%);
+   background-image: url(../img/inner-sign-bottom.png);
+   background-repeat: no-repeat;
+   background-position: center;
+  }
+}
+
+.c-inner__text {
+ font-family: $fontFamily;
+ font-weight: $fontRegular;
+ color: $white;
+ font-size: .52174em;
+ line-height: 1.5em;
+ letter-spacing: $LetterSpacBig;
+ margin-bottom: 70px;
+ max-width: 575px;
+ text-align: center;
+}
+
+@media(max-width: 992px) {
+  .l-inner {
+    background-image: url(../img/inner-bg-tablet.jpg);
+  }
+}
+
+@media(max-width: 768px ) {
+  .l-inner {
+    height: auto;
+  }
+}
+
+@media(max-width: 600px) {
+  .l-inner {
+    font-size: 35px;
+  }
+}
+
+@media(max-width: 479px) {
+  .l-inner {
+    background-image: url(../img/inner-bg-phone.jpg);
+  }
+}

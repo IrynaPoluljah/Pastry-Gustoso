@@ -1,0 +1,51 @@
+@mixin flex {
+  display: flex;
+}
+
+@mixin space-between {
+  justify-content: space-between;
+}
+
+@mixin space-around {
+  justify-content: space-around;
+}
+
+@mixin center {
+  justify-content: center;
+}
+
+@mixin align-center {
+  align-items: center;
+}
+
+@mixin column {
+  flex-direction: column;
+}
+
+@mixin wrap {
+  flex-wrap: wrap;
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absoluteCenterX {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin absoluteCenterY {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin fontSecond {
+  font-family: $fontFamilySecond;
+  font-weight: $fontBold;
+}

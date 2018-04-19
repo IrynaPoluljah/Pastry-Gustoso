@@ -1,0 +1,84 @@
+.c-card {
+ font-family: $fontFamilySecond;
+ font-weight: $fontBold;
+ width: 200px;
+ height: 200px;
+ background-color: rgba(255, 255, 255, .8);
+ @include flex;
+ @include column;
+ @include center;
+ @include align-center;
+}
+
+.c-card__list {
+ position: absolute;
+ right: 10px;
+ top: 50%;
+ transform: translateY(-50%);
+ box-shadow: 0 7px 10px 0 rgba(186, 178, 146, .3);
+}
+
+.c-card__list .c-card:nth-child(1) {
+ margin-bottom: 1px;
+}
+
+.c-card__time {
+ color: $darkYellow;
+ font-size: 92px;
+ letter-spacing: $LetterSpacBig;
+ display: block;
+ text-align: center;
+}
+
+.c-card__time--small {
+ font-size: 60px;
+ color: $brown;
+}
+
+.c-card__minutes {
+ font-size: 18px;
+ color: $greyMedium;
+ display: block;
+ margin-top: 5px;
+}
+
+.c-card--carousel {
+ position: absolute;
+ top: -43px;
+ right: -95px;
+ box-shadow: 0 25px 80px 7px rgba(105, 80, 58, .45);
+}
+
+.c-card--image {
+ background-image: url(../img/ready-bg.jpg);
+ background-size: cover;
+}
+
+.c-card__list {
+  @include flex;
+  @include column;
+ }
+
+@media(max-width: 1300px) {
+ .c-card--carousel {
+   right: -100px;
+   top: -70px;
+ }
+}
+
+@media(max-width: 768px) {
+  .c-card.c-card--carousel {
+    display: none;
+  }
+
+  .c-card {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media(max-width: 600px) {
+  .c-card__list {
+    display: none;
+  }
+}

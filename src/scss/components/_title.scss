@@ -1,0 +1,98 @@
+.c-title {
+ font-family: $fontFamily;
+ font-weight: $fontBold;
+ color: $brown;
+ letter-spacing: $LetterSpacXs;
+}
+
+.c-card .c-title {
+ margin-bottom: 20px;
+}
+
+.c-title--main {
+ font-family: $fontTitle;
+ font-size: 2em;
+ color: $white;
+ letter-spacing: $LetterSpacMd;
+ margin-bottom: 1.5217em;
+ text-align: center;
+ position: relative;
+  &::after {
+   content: "";
+   display: block;
+   height: 12px;
+   width: 190px;
+   background-image: url(../img/dashed-line.png);
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%);
+   bottom: -.768em;
+  }
+}
+
+.c-title--block {
+ @include fontSecond;
+ color: $brown;
+ font-size: 48px;
+ letter-spacing: $LetterSpacXs;
+ margin-bottom: .5em;
+ text-align: center;
+}
+
+.c-title--small {
+ @include fontSecond;
+ color: $brownLight;
+ font-size: 14px;
+ letter-spacing: $LetterSpacBig;
+ text-transform: uppercase;
+ margin-bottom: 3.6em;
+ text-align: center;
+}
+
+.l-carousel__description .c-title--block,
+.l-carousel__description .c-title--small {
+ text-align: left;
+}
+
+.c-title--medium {
+ @include fontSecond;
+ color: $brownLight;
+ font-size: 18px;
+ letter-spacing: $LetterSpacBig;
+ text-transform: uppercase;
+}
+
+.c-title--large {
+ font-family: $fontFamilySecond;
+ font-size: 60px;
+ color: $white;
+ letter-spacing: $LetterSpacLit;
+ text-align: center;
+}
+
+.l-menu .c-title--large {
+  margin-bottom: 10px;
+}
+
+.l-menu .c-title--menu {
+  margin-bottom: 65px;
+ }
+
+.c-title--menu {
+ font-family: $fontFamilySecond;
+ font-size: 18px;
+ color: $coffeeColor;
+ letter-spacing: $LetterSpacLit;
+ text-transform: uppercase;
+ text-align: center;
+}
+
+@media(max-width: 1300px) {
+  .c-title--small {
+    margin-bottom: 1.6em;
+  }
+
+  .l-menu .c-title--menu {
+    margin-bottom: 40px;
+   }
+}

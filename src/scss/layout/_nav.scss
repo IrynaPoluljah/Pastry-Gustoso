@@ -1,0 +1,74 @@
+.l-nav {
+ @include flex;
+}
+
+.l-nav__link {
+ color: $white;
+ border: .5px solid transparent;
+ padding-bottom: 10px;
+ text-transform: uppercase;
+ transition: border .5s;
+  &:hover {
+   border-bottom-color: rgba(255, 255, 255, .4);
+  }
+}
+
+.l-nav__link--disabled {
+ cursor: default;
+ color: rgba(255, 255, 255, .5);
+  &:hover {
+   border-bottom-color: transparent; 
+  }
+}
+
+.l-nav__item + .l-nav__item {
+ margin-left: 6.4em;
+  &::before {
+    content: "\223C";
+    display: block;
+    position: absolute;
+    left: -3.2em;
+    color: $white;
+  }
+}
+
+.l-nav__item {
+ font-family: $fontFamilySecond;
+ font-weight: $fontRegular;
+ color: $white;
+ letter-spacing: $letterSpacLg;
+ position: relative;
+ user-select: none;
+}
+
+@media(max-width: 1300px) {
+  .l-nav__item + .l-nav__item {
+    margin-left: 2.6em;
+    &::before {
+      left: -1.3em;
+    }
+  }
+}
+
+@media(max-width: 1199px) {
+  .l-nav {
+    display: none;
+  }
+
+  .l-nav__item + .l-nav__item {
+    margin-left: 0;
+    &::before {
+      display: none;
+    }
+  }
+
+  .l-nav__item::after {
+    content: "\223C";
+    display: block;
+    position: absolute;
+    left: auto;
+    right: 2em;
+    color: $white;
+    @include absoluteCenterY;
+  }
+}

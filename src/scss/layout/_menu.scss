@@ -1,0 +1,56 @@
+.l-menu {
+ background-image: url(../img/menu-bg.jpg);
+ background-size: cover;
+ padding: 90px 0 70px;
+}
+
+.l-menu__wrap--right {
+ display: grid;
+ justify-content: end;
+}
+
+.l-menu__list {
+ letter-spacing: $LetterSpacLit;
+}
+
+.l-menu__list li + li {
+ margin-top: 50px;
+}
+
+.l-menu__name {
+ @include fontSecond;
+ color: $white;
+ font-size: 30px;
+ margin-bottom: 20px;
+ text-align: center;
+}
+
+.l-menu__comment {
+ font-family: $fontFamily;
+ font-weight: $fontRegular;
+ color: $grey;
+ font-size: 16px;
+ margin-bottom: 30px;
+ text-align: center;
+}
+
+.l-menu__price {
+ display: block;
+ font-family: $fontFamilySecond;
+ font-weight: $fontRegular;
+ color: $darkYellow;
+ font-size: 36px;
+ text-align: center;
+}
+
+@media(max-width: 1300px) {
+ .l-menu__comment {
+  margin-bottom: 15px;
+ }
+}
+
+@media(max-width: 768px) {
+ .l-menu__wrap--right {
+  justify-content: center;
+ }
+}
